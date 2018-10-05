@@ -314,7 +314,20 @@ that the congruent and incongruent population means are different.
 
 Because we are dealing with time measurements for the same subject under
 different conditions, it is appropriate to use a paired t-test to test
-our hypotheses.
+our hypotheses. This test works under the following assumptions: - Each
+of the two populations being compared follow a normal distribution - The
+two populations have the same variance - There should be no significant
+outliers in the differences between the two related groups.
+
+In this case, I believe these assumptions are reasonable. However, I
+will also perform a test by bootstrapping the sample (which does not
+require the above assumptions) to confirm the results of the t-test.
+Ideally, we would want to have \textgreater{}30 pairs for the t-test,
+but 24 pairs should be close enough. If anything, having fewer pairs
+will affect the power of our test, but will not affect the
+interpretation if the test leads us to reject the null hypothesis. We do
+not have a population parameter for this test, we will be working with
+the sample statistics to compare the populations.
 
     \hypertarget{report-some-descriptive-statistics-regarding-this-dataset.-include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.-the-name-of-the-data-file-is-stroopdata.csv.}{%
 \paragraph{(3) Report some descriptive statistics regarding this
